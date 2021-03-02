@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: cloud-k8s-consumer
+
+server:
+  port: 8081
