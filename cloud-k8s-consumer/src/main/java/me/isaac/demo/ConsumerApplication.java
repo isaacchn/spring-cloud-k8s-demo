@@ -9,14 +9,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @EnableDiscoveryClient
 @EnableFeignClients
 public class ConsumerApplication {
-//    @LoadBalanced
-//    @Bean
-//    public RestTemplate getRestTemplate() {
-//        return new RestTemplate();
-//    }
-
     public static void main(String[] args) {
         SpringApplication.run(ConsumerApplication.class, args);
     }
-
 }

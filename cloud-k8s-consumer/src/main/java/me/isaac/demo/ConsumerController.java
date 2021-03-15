@@ -9,12 +9,12 @@ import java.util.UUID;
 @RestController
 public class ConsumerController {
     @Autowired
-    private TestFeignClient testFeignClient;
+    private ProducerFeignClient producerFeignClient;
 
     @GetMapping("/consumer")
     public String consumer() {
         String uuid = UUID.randomUUID().toString();
-        String result = testFeignClient.test2(uuid);
+        String result = producerFeignClient.test2(uuid);
         return result;
     }
 }
