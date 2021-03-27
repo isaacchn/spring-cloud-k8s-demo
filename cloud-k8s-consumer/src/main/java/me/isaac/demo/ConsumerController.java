@@ -1,20 +1,25 @@
 package me.isaac.demo;
 
+import cn.hutool.core.lang.UUID;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.UUID;
 
 @RestController
 public class ConsumerController {
     @Autowired
     private ProducerFeignClient producerFeignClient;
 
-    @GetMapping("/consumer/{code}")
-    public String consumer(@PathVariable(name = "code") String code) {
-        String result = producerFeignClient.produce(code);
-        return result;
+    @PostMapping("/consumer/send")
+    public ProducerResultVO consumer(@RequestBody ConsumerDTO dto) {
+        String uuid = UUID.randomUUID().toString();
+        ProducerDTO producerDTO = new ProducerDTO();
+        producerDTO.setPhone(dto.getPhone());
+        producerDTO.setMailto(dto.getMailto());
+        producerDTO.setInfo(uuid);
+
+        ProducerResultVO vo = producerFeignClient.produce(producerDTO);
+        return vo;
     }
 }

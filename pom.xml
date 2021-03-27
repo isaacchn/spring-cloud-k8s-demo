@@ -16,6 +16,8 @@
         <module>cloud-k8s-producer</module>
         <module>cloud-k8s-consumer</module>
         <module>cloud-k8s-gateway</module>
+        <module>cloud-k8s-sms</module>
+        <module>cloud-k8s-mail</module>
     </modules>
 
     <properties>
@@ -25,6 +27,7 @@
         <spring.boot.version>2.3.2.RELEASE</spring.boot.version>
         <spring.cloud.version>Hoxton.SR8</spring.cloud.version>
         <spring.cloud.alibaba.version>2.2.5.RELEASE</spring.cloud.alibaba.version>
+        <hutool.version>5.6.1</hutool.version>
     </properties>
 
     <dependencies>
@@ -39,6 +42,12 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <version>${spring.boot.version}</version>
             <scope>test</scope>
+        </dependency>
+        <!--hutool-->
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>${hutool.version}</version>
         </dependency>
     </dependencies>
 
