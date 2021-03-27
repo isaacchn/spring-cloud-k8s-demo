@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--cloud-k8s-producer-->
+<!--cloud-k8s-gateway-->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <groupId>me.isaac</groupId>
         <artifactId>cloud-k8s-root</artifactId>
+        <groupId>me.isaac</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
+    <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>cloud-k8s-producer</artifactId>
+    <artifactId>cloud-k8s-gateway</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>cloud-k8s-producer</name>
-    <description>cloud-k8s-producer</description>
+    <name>cloud-k8s-gateway</name>
+    <description>cloud-k8s-gateway</description>
 
     <dependencies>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-gateway</artifactId>
         </dependency>
     </dependencies>
 
@@ -35,5 +35,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>

@@ -1,3 +1,4 @@
+#cloud-k8s-producer
 spring:
   application:
     name: cloud-k8s-producer

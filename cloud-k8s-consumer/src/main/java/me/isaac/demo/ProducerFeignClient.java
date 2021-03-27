@@ -7,5 +7,5 @@ import org.springframework.web.bind.annotation.PathVariable;
 @FeignClient(name = "cloud-k8s-producer")
 public interface ProducerFeignClient {
     @GetMapping(value = "/producer/{code}")
-    String test2(@PathVariable("code") String code);
+    String produce(@PathVariable("code") String code);
 }

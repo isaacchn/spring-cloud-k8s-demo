@@ -8,6 +8,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class ProducerController {
     @GetMapping("/producer/{code}")
     public Producer producer(@PathVariable String code) {
-        return new Producer(code);
+        return new Producer(code, "Producer");
     }
 }

@@ -7,4 +7,5 @@ import lombok.Data;
 @AllArgsConstructor
 public class Producer {
     private String code;
+    private String name;
 }

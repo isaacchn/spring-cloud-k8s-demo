@@ -1,0 +1,19 @@
+#cloud-k8s-gateway
+spring:
+  application:
+    name: cloud-k8s-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 10.10.20.90:8848
+    gateway:
+      routes:
+        - id: consumer
+          uri: lb://cloud-k8s-consumer
+          predicates:
+            - Path=/api-consumer/**
+          filters:
+            - StripPrefix=1
+
+server:
+  port: 8079
