@@ -1,0 +1,11 @@
+#cloud-k8s-producer
+spring:
+  profiles: dev
+  application:
+    name: cloud-k8s-producer
+  cloud:
+    nacos:
+      server-addr: 10.10.20.90:8848
+
+server:
+  port: 8081

@@ -1,10 +1,4 @@
 #mail
-server:
-  port: 8083
 spring:
-  application:
-    name: cloud-k8s-mail
-  cloud:
-    nacos:
-      discovery:
-        server-addr: 10.10.20.90:8848
+  profiles:
+    active: dev

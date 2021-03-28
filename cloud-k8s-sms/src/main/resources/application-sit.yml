@@ -1,0 +1,11 @@
+#sms
+server:
+  port: 8082
+spring:
+  profiles: sit
+  application:
+    name: cloud-k8s-sms
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 10.10.20.90:8848

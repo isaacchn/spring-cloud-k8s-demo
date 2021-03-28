@@ -1,0 +1,11 @@
+#consumer
+spring:
+  profiles: dev
+  application:
+    name: cloud-k8s-consumer
+  cloud:
+    nacos:
+      server-addr: 10.10.20.90:8848
+
+server:
+  port: 8080

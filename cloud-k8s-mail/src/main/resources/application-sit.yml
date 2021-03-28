@@ -1,0 +1,11 @@
+#mail
+server:
+  port: 8083
+spring:
+  profiles: sit
+  application:
+    name: cloud-k8s-mail
+  cloud:
+    nacos:
+      discovery:
+        server-addr: nacos-headless.default.svc.cluster.local:8848
