@@ -5,7 +5,9 @@ spring:
     name: cloud-k8s-consumer
   cloud:
     nacos:
-      server-addr: nacos-headless.default.svc.cluster.local:8848
+      server-addr: 10.10.20.90:8848
+  main:
+    allow-bean-definition-overriding:  true
 
 server:
   port: 8080
