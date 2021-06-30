@@ -1,4 +1,9 @@
 FROM openjdk:8-jdk-alpine
-ARG JAR_FILE="target/cloud-k8s-sms-0.0.1-SNAPSHOT.jar"
-COPY ${JAR_FILE} app.jar
-ENTRYPOINT ["java","-jar","/app.jar","--spring.profiles.active=sit"]
+
+WORKDIR /spring
+
+COPY target/lib ./lib
+COPY target/resources ./resources
+COPY target/cloud-k8s-sms.jar ./
+
+ENTRYPOINT ["java","-jar","./cloud-k8s-sms.jar","--spring.profiles.active=sit"]
