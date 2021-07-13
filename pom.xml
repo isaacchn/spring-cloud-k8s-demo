@@ -85,6 +85,14 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+            <!--spring-cloud-starter-alibaba-nacos-config-->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+                <version>${spring.cloud.alibaba.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
             <!--spring-cloud-starter-->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>

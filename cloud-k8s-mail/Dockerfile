@@ -2,7 +2,7 @@ FROM openjdk:8-jdk-alpine
 
 WORKDIR /spring
 
-COPY target/lib ./lib
+COPY target/libs ./libs
 COPY target/resources ./resources
 COPY target/cloud-k8s-sms.jar ./
 

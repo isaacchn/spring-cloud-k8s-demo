@@ -54,7 +54,7 @@
                             <!--是否要把第三方jar加入到类构建路径-->
                             <addClasspath>true</addClasspath>
                             <!--外部依赖jar包的最终位置-->
-                            <classpathPrefix>lib/</classpathPrefix>
+                            <classpathPrefix>libs/</classpathPrefix>
                             <!--项目启动类-->
                             <mainClass>me.isaac.demo.MailApplication</mainClass>
                         </manifest>
@@ -75,6 +75,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
+                <version>3.2.0</version>
                 <executions>
                     <execution>
                         <id>copy-lib</id>
@@ -83,7 +84,7 @@
                             <goal>copy-dependencies</goal>
                         </goals>
                         <configuration>
-                            <outputDirectory>${project.build.directory}/lib</outputDirectory>
+                            <outputDirectory>${project.build.directory}/libs</outputDirectory>
                             <excludeTransitive>false</excludeTransitive>
                             <stripVersion>false</stripVersion>
                             <!--test (default) scope gives all dependencies-->
