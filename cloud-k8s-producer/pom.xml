@@ -16,6 +16,11 @@
     <name>cloud-k8s-producer</name>
     <description>cloud-k8s-producer</description>
 
+    <properties>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
